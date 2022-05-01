@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Chat app CSS illustration]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+/>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="Container">
+    <div class="BodyImage BodyImage--dark"></div>
+    <div class="BodyImage BodyImage--light"></div>
+    <div class="inner-wrap">
+      <div class="Illustration">
+        <div class="Illustration__screen">
+          <header class="ScreenHeader">
+            <div>
+              <div class="ScreenHeader__cutout"></div>
+            </div>
+            <div class="bottom-row">
+              <button class="ScreenHeader__backBtn"> <i class="uil uil-angle-left-b"></i></button><img class="ScreenHeader__profileImg" src="avatar.jpg" alt="" width="24"/>
+              <div class="ProfileLabel">
+                <div class="ProfileLabel__name">Samuel Green</div>
+                <div class="ProfileLabel__status">Available to Walk</div>
+              </div>
+              <button class="ScreenHeader__menu"> <i class="uil uil-ellipsis-v"></i></i></button>
+            </div>
+          </header>
+          <main class="ScreenBody">
+            <div class="ChatPosts">
+              <div class="ChatBubble ChatBubble--friend">
+                <p>That sounds great. I'd be happy with that.</p>
+              </div>
+              <div class="ChatBubble ChatBubble--friend">
+                <p>Could you send over some pictures of your dog, please?</p>
+              </div>
+              <div class="ChatBubble ChatBubble--userImageGroup"><img src="dog-image-1.jpg" alt=""/><img src="dog-image-2.jpg" alt=""/><img src="dog-image-3.jpg" alt=""/>
+              </div>
+              <div class="ChatBubble ChatBubble--user">
+                <p>Here are a few pictures. She's a happy girl!</p>
+              </div>
+              <div class="ChatBubble ChatBubble--user">
+                <p>Can you make it?</p>
+              </div>
+              <div class="ChatBubble ChatBubble--friend">
+                <p>She Looks so happy! The time we discussed works. How long shall I take her out for?</p>
+              </div>
+              <div class="ChatBubble ChatBubble--option"><i class="uil uil-circle"></i><span class="description">30 minute walk</span><span class="price">$29</span>
+              </div>
+              <div class="ChatBubble ChatBubble--option"><i class="uil uil-circle"></i><span class="description">1 hour walk</span><span class="price">$49</span>
+              </div>
+            </div>
+            <div class="ChatMessage">
+              <input type="text" placeholder="Type a message..."/><i><lord-icon
+                src="https://cdn.lordicon.com/iifryyua.json"
+                trigger="morph"
+                colors="primary:#121331"
+                scale="30"
+                state="hover-3"
+                style="width:50px;height:50px">
+            </lord-icon></i>
+            </div>
+          </main>
+        </div>
+      </div>
+      <div class="LandingDetail">
+        <h1>Simple Booking</h1>
+        <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+      </div>
+    </div> <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nirupam Chnagmai</a>.
+  </div>
+  </div>
+
+  
+  
+  <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+  
+</body>
+</html>

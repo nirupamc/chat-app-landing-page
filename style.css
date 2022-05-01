@@ -1,0 +1,312 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400); */
+
+*{
+    box-sizing: border-box;
+}
+body {
+    align-items: center;
+    display: flex;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    overflow: scroll;
+}
+.Container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
+    padding: 32px 0;
+    position: relative;
+    width: 100%;
+ min-height: 100vh;
+    /* min-height: 800px; */
+    overflow: hidden;
+}
+.BodyImage {
+    background: linear-gradient(45deg, #8739ff, #e844ff);
+    border-radius: 255px;
+    width: 510px;
+    height: 1018px;
+    position: absolute;
+    z-index: -10;
+}
+.BodyImage--dark {
+    top: -509px;
+    left: -323px;
+}
+.BodyImage--light {
+    opacity: 0.03;
+    bottom: -509px;
+    right: -323px;
+}
+@media (min-width: 922px) {
+    .BodyImage--dark {
+        top: -39.75%;
+        left: -6.25%;
+   }
+    .BodyImage--light {
+        bottom: -42.125%;
+        right: -12.9%;
+   }
+}
+.inner-wrap {
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 64px;
+    width: 100%;
+    max-width: 881px;
+}
+@media (max-width: 786px) {
+    .inner-wrap {
+        flex-direction: column;
+   }
+}
+@media (min-width: 922px) {
+    .inner-wrap {
+        transform: translateX(50px);
+   }
+}
+@keyframes fade-in-on-load {
+    0% {
+        opacity: 0;
+   }
+    100% {
+        opacity: 1;
+   }
+}
+.Illustration {
+    background: white;
+    border-radius: 30px;
+    border: 10px solid white;
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.25);
+    width: 310px;
+    overflow: hidden;
+    animation: fade-in-on-load 1s;
+}
+.Illustration__screen {
+    background: #f5f3f7;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.ScreenHeader {
+    background: linear-gradient(45deg, #8739ff, #e844ff);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 0 13px 0 rgba(62, 39, 83, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    padding: 0 16px 12px;
+}
+.ScreenHeader__cutout {
+    background: white;
+    border-radius: 0 0 14px 14px;
+    height: 18px;
+    width: 129px;
+}
+.ScreenHeader .bottom-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ScreenHeader .bottom-row button {
+    color: white;
+    background: transparent;
+    border: 0;
+}
+.ScreenHeader__backBtn {
+    margin-right: 4px;
+}
+.ScreenHeader__menu {
+    margin-left: auto;
+}
+.ScreenHeader__profileImg {
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.ProfileLabel {
+    margin-left: 8px;
+}
+.ProfileLabel__name {
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+}
+.ProfileLabel__status {
+    color: #d99eff;
+    font-size: 8px;
+    font-weight: 400;
+}
+.ScreenBody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding: 12px 8px;
+}
+.ChatPosts {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+@keyframes chat-bubble-slide-in {
+    100% {
+        transform: translateX(0);
+   }
+}
+.ChatBubble {
+    border-radius: 10px;
+    font-size: 8px;
+    line-height: 1.25;
+    max-width: 128px;
+    padding: 8px;
+    animation-name: chat-bubble-slide-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.43, 1.21);
+}
+.ChatBubble:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+.ChatBubble:nth-of-type(1) {
+    animation-delay: 1s;
+}
+.ChatBubble:nth-of-type(2) {
+    animation-delay: 1.2s;
+}
+.ChatBubble:nth-of-type(3) {
+    animation-delay: 1.8s;
+}
+.ChatBubble:nth-of-type(4) {
+    animation-delay: 2.4s;
+}
+.ChatBubble:nth-of-type(5) {
+    animation-delay: 3s;
+}
+.ChatBubble:nth-of-type(6) {
+    animation-delay: 3.6s;
+}
+.ChatBubble:nth-of-type(7) {
+    animation-delay: 4.2s;
+}
+.ChatBubble:nth-of-type(8) {
+    animation-delay: 4.8s;
+}
+.ChatBubble--friend {
+    color: #9341c8;
+    background: #eee5f4;
+    border-bottom-left-radius: 4px;
+    transform: translateX(-200px);
+}
+.ChatBubble--user {
+    color: #6e5d7e;
+    background: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 10px 5px 0 rgba(62, 39, 83, 0.05);
+    align-self: flex-end;
+    transform: translateX(200px);
+}
+.ChatBubble--userImageGroup {
+    align-self: flex-end;
+    max-width: unset;
+    padding: 0;
+    padding-top: 8px;
+    transform: translateX(200px);
+}
+.ChatBubble--userImageGroup img {
+    border-radius: 10px;
+    width: 40px;
+}
+.ChatBubble--userImageGroup img + img {
+    margin-left: 8px;
+}
+.ChatBubble--option {
+    background: linear-gradient(-45deg, #8739ff, #e844ff);
+    border-bottom-left-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    max-width: unset;
+    width: 160px;
+    transform: translateX(-200px);
+}
+.ChatBubble--option i {
+    color: #e472ff;
+    font-size: 12px;
+    margin-right: 8px;
+}
+.ChatBubble--option span {
+    color: white;
+}
+.ChatBubble--option .description {
+    font-size: 8px;
+}
+.ChatBubble--option .price {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: auto;
+}
+.ChatMessage {
+    display: flex;
+    position: relative;
+}
+.ChatMessage input {
+    border: 0;
+    border-radius: 7% / 50%;
+    padding: 8px 35px 8px 20px;
+    width: 100%;
+}
+.ChatMessage input::placeholder {
+    color: #c5c9cc;
+    font-size: 9px;
+}
+.ChatMessage i {
+    background: #dbb2f3;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+.LandingDetail {
+    width: 100%;
+    max-width: 445px;
+}
+.LandingDetail h1 {
+    color: #3e2753;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+.LandingDetail p {
+    color: #a39da9;
+    line-height: 24px;
+}
+@media (max-width: 786px) {
+    .LandingDetail {
+        text-align: center;
+   }
+}
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+    position: absolute;
+ bottom: 0%;
+ left: 50%;
+ transform: translate(-50%, -50%) 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
